@@ -1,0 +1,106 @@
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+
+body{
+  height: 100vh;
+  display:flex; 
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+
+.calculator-container{
+  display:flex; 
+  flex-direction:column; 
+  background-color:rgb(4, 61, 68);
+  width: 300px;
+  border: 4px solid rgb(9, 9, 29);
+  border-radius: 30px;
+  outline: none;
+
+}
+
+.button-container{
+
+display: grid; 
+grid-template-columns: 1fr 1fr 1fr 1fr;
+
+margin:20px;
+height: 300px;
+grid-column-gap: 9px;
+grid-row-gap: 5px;
+grid-template-areas:
+
+  "clear clear slash multiply"
+  "seven eight nine minus"
+  "four five six plus"
+  "one two three equal"
+  "zero zero dot equal";
+
+}
+
+button{
+  border-radius: 10px;
+  border: 1px solid rgb(27, 26, 26);
+  
+  margin: 0;
+  text-decoration: none;
+  background: #9b9ba5;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 26px;
+  font-weight: 500; 
+  
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+
+#clear {
+  grid-area: clear;
+  background-color: crimson;
+}
+
+#zero{
+  grid-area: zero;
+}
+
+#equals{
+  grid-area: equal;
+  background-color: darkorange;
+}
+#add{
+background-color:rgb(63, 63, 63);
+}
+#subtract{
+  background-color:rgb(63, 63, 63);
+}
+
+#divide{
+  background-color:rgb(63, 63, 63);
+}
+#multiply{
+  background-color:rgb(63, 63, 63);
+}
+
+.display{
+  text-align: right;
+  padding:5px;
+  overflow-wrap: break-word;
+margin: 20px 20px 0px 20px;
+font-family: "Orbitron", sans-serif;
+font-size: 17px;
+  min-height:70px;
+  background-color: rgb(147, 179, 116);
+}
+.resultnum{
+  font-size: 22px;
+  font-weight: 600;
+}
+
